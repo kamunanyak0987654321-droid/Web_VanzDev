@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Bot Vanz</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      color: #fff;
+    }/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* HAMBURGER */
+.menu-btn {
+  width: 30px;
+  cursor: pointer;
+}
+.menu-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -320px; /* lebih jauh biar tidak kelihatan */
+  width: 260px;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+.side-menu h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.side-menu a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 10px;
+}
+
+/* MAIN CONTENT */
+.main-box {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.main-box h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dashboard {
+  margin: 25px auto;
+  max-width: 500px;
+  background: rgba(255,255,255,0.1);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.dashboard p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.profil-page button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #00c6ff;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.profil-page button:hover {
+  background: #0072ff;
+}
+
+/* HALAMAN PANDUAN */
+.panduan-page {
+  display: none; /* default tersembunyi */
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 12px;
+  margin: 20px;
+  color: #0f0;
+  font-family: monospace;
+}
+
+.panduan-page pre {
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  border-radius: 10px;
+  color: #0f0;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+/* HIDDEN PAGE (Cara Nambah Fitur) */
+.fitur-page {
+  display: none;
+  padding: 20px;
+}
+
+pre {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 10px;
+  color: #0f0;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
+  </style>
+</head>
+<body>  <!-- SIDE MENU -->  <div class="side-menu" id="sideMenu">
+    <h3>Menu</h3>
+    <a href="#" onclick="showHome()">🏠 Dashboard</a>
+    <a href="#" onclick="showFitur()">📘 API VanzDev</a>
+<a href="#" onclick="showProfil()">👤 Profil Developer</a>
+  </div>  <!-- HEADER -->  <div class="header">
+    <div class="title">Web Bot Vanz</div><div class="menu-btn" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+  </div>  <!-- MAIN CONTENT -->  <div class="main-box" id="homePage">
+    <h1>Halo, Selamat Datang di Web Bot Vanz 👋</h1>
+    <p>Github:↓ https://github.com/kamunanyak0987654321-droid</p>
+    </p>mau pake bot gas aja chat nomor bot nya ↓.</p><div class="dashboard">
+  <h2>Dashboard</h2>
+  <p><b>Nomor Owner:</b>+62-895-3651-56485</p>
+  <p><b>Nomor Bot:</b>+62-882-4567-2621</p>
+  <p>Status: [<span style="color: #0f0">Online</span>]</p>
+</div>
+
+        
+        <div class="dashboard">
+  <h2>Status Bot</h2>
+  <p> Bot Memakai Node.js 24.9.0</p>
+  <p>Respon Time:[ <span style="color: #0f0"> 36ms </span>]</p>
+  <p><h3>
+    Liat cara menggunakan bot di bawah ↓
+  </h3></p>
+</div>
+
+<div class="dashboard" style="text-align:center;">
+  <h2>Scan QR Bot Di Bawah Ini ↓</h2>
+  <img 
+    src="https://kamunanyak0987654321-droid.github.io/Ibadah/barcodeBot.jpg"
+    style="width:200px; border-radius:5px; margin-top:10px;">
+</div>
+
+<div class="dashboard">
+  <h2>Cara Menggunakan Bot</h2>
+  <p> Ketik /menu atau .menu </p>
+  <p> Ketik /allmenu untuk melihat semua</p>
+  <p>
+    <pre>
+.allmenu → Melihat semua menu↓
+      
+.rvo membuka mdia 1x liat sperti foto
+
+        #DLL dan lainnya
+    </pre>
+  </p>
+</div>
+
+
+  </div>  <!-- FITUR PAGE -->  <div class="fitur-page" id="fiturPage">
+    <h2>API VanzDev</h2>
+    <pre>
+      API bratvid:
+      https://brat.siputzx.my.id/mp4?text='
+    </pre>
+    <pre>
+      API brat:
+      https://brat.caliphdev.com/api/brat?text='
+    </pre>
+    <pre>
+      API spotify:
+    https://www.bhandarimilan.info.np/spotisearch?query=
+    </pre>
+  </div>  <script>
+    function toggleMenu() {
+      document.getElementById('sideMenu').classList.toggle('active');
+    }
+
+    function showHome() {
+      document.getElementById('homePage').style.display = 'block';
+      document.getElementById('fiturPage').style.display = 'none';
+      toggleMenu();
+    }
+
+    function showFitur() {
+      document.getElementById('homePage').style.display = 'none';
+      document.getElementById('fiturPage').style.display = 'block';
+      toggleMenu();
+    }
+  </script>
+  
+  <!-- PROFIL DEVELOPER -->
+<div class="profil-page" id="profilPage" style="display:none; padding:20px; text-align:center; background:rgba(0,0,0,0.6); border-radius:12px; margin:20px; color:#0f0;">
+  <h2>Profil Developer Vanz</h2>
+  <p>Halo! Ini profil saya, klik tombol di bawah untuk mengunjungi akun saya.</p>
+
+  <button onclick="window.open('https://wa.me/62895365156485', '_blank')">WhatsApp</button>
+  <button onclick="window.open('https://www.instagram.com/mae_vanz?igsh=ZDBvNTg0b2I3dzB3', '_blank')">Instagram</button>
+  <button onclick="window.open('https://github.com/username', '_blank')">GitHub</button>
+  <button onclick="window.open('https://www.tiktok.com/@vanzz.me', '_blank')">TikTok</button>
+
+  <br><br>
+  <button onclick="showHome()">🏠 Kembali ke Dashboard</button>
+</div><script>
+  function toggleMenu() {
+  document.getElementById('sideMenu').classList.toggle('active');
+}
+
+// Buka Dashboard → sembunyikan Profil
+function showHome() {
+  document.getElementById('homePage').style.display = 'block';
+  document.getElementById('apiPage').style.display = 'block';
+  document.getElementById('profilPage').style.display = 'none';
+  toggleMenu();
+}
+
+// Buka Profil → sembunyikan Dashboard & API
+function showProfil() {
+  document.getElementById('profilPage').style.display = 'block';
+  document.getElementById('homePage').style.display = 'none';
+  document.getElementById('apiPage').style.display = 'none';
+  toggleMenu();
+}
+
+// Buka API → sembunyikan Profil
+function showApi() {
+  document.getElementById('apiPage').style.display = 'block';
+  document.getElementById('homePage').style.display = 'block'; // Dashboard tetap tampil
+  document.getElementById('profilPage').style.display = 'none';
+  toggleMenu();
+}
+</script>
+  </body>
+</html>
