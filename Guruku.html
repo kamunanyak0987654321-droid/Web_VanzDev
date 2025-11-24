@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Hari Guru — VanzDev</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#0f172a;
+      --glass:rgba(255,255,255,0.06);
+      --accent:#f59e0b;
+      color-scheme:dark;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter;background:var(--bg1);color:white;}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;backdrop-filter:blur(12px);background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.05);}
+    header .logo{font-size:22px;font-weight:800;letter-spacing:0.5px}
+    nav a{margin-left:26px;text-decoration:none;color:white;font-weight:600;transition:0.2s}
+    nav a:hover{color:var(--accent)}.hero{height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px}
+.hero h1{font-size:52px;font-weight:800;background:linear-gradient(90deg,#fff,#ffd166);-webkit-background-clip:text;color:transparent;margin-bottom:10px}
+.hero p{max-width:540px;font-size:18px;color:rgba(255,255,255,0.8)}
+.hero button{margin-top:22px;background:linear-gradient(90deg,var(--accent),#fb7185);padding:14px 28px;border:none;border-radius:14px;font-weight:700;color:#081120;font-size:16px;cursor:pointer}
+
+section{padding:60px 32px;max-width:1100px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:32px}
+.card{padding:22px;border-radius:18px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.05);transition:0.25s}
+.card:hover{transform:translateY(-4px);background:rgba(255,255,255,0.08)}
+
+.footer{margin-top:80px;padding:24px;text-align:center;color:rgba(255,255,255,0.6);border-top:1px solid rgba(255,255,255,0.06)}
+
+  </style>
+</head>
+<body><header>
+  <div class="logo">Gilang/VanzDev</div>
+</header><button id="lihatCodeBtn" style="position:fixed;right:22px;bottom:22px;padding:12px 20px;border-radius:12px;background:linear-gradient(90deg,#f59e0b,#fb7185);border:none;font-weight:700;color:#081120;cursor:pointer;z-index:99">Lihat Codingan</button>
+
+<div id="codePopup" style="display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);padding:40px;z-index:100;overflow:auto">
+  <div style="max-width:900px;margin:auto;background:#0f172a;border-radius:16px;padding:22px;border:1px solid rgba(255,255,255,0.1)">
+    <h2 style="margin-bottom:14px">Codingan Halaman Ini</h2>
+    <pre style="white-space:pre-wrap;font-size:14px;background:rgba(255,255,255,0.05);padding:16px;border-radius:12px;overflow:auto" id="codeBlock"></pre>
+    <button onclick="document.getElementById('codePopup').style.display='none'" style="margin-top:16px;padding:10px 18px;border-radius:10px;background:#fb7185;border:none;font-weight:700;color:#081120;cursor:pointer">Tutup</button>
+  </div>
+</div>
+<script>
+  const lihatBtn = document.getElementById('lihatCodeBtn');
+  const codePopup = document.getElementById('codePopup');
+  const codeBlock = document.getElementById('codeBlock');lihatBtn.onclick = () => { fetch(location.href) .then(res => res.text()) .then(txt => { codeBlock.textContent = txt; codePopup.style.display = 'block'; }); }; </script>
+
+<div class="hero">
+  <h1>Selamat Hari Guru 2025</h1>
+  <p>"Ucapan spesial untuk guru yang telah mengajar kan informatika.Terima kasih atas dedikasi Anda dalam membimbing kami memahami teknologi, logika, dan perkembangan digital. Semoga selalu sehat dan diberi keberkahan."</p>
+  <button onclick="location.href='kartu.html'">Buat Kartu Ucapan</button>
+</div><section>
+  <h2 style="font-size:28px;font-weight:700">Mengapa Hari Guru Itu Penting?</h2>
+  <div class="grid">
+    <div class="card">Guru adalah pahlawan tanpa tanda jasa yang membentuk masa depan generasi muda.</div>
+    <div class="card">Mereka bukan hanya mengajar, tetapi juga membimbing dengan penuh kesabaran.</div>
+    <div class="card">Satu guru baik bisa mengubah hidup satu murid selamanya.</div>
+  </div>
+</section><div class="footer">Dibuat dengan ❤ oleh Gilang X DPIB3/div></body>
+</html>
